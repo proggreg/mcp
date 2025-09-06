@@ -48,6 +48,15 @@ app.post('/mcp', async (req: any, res: any) => {
 
     // ... set up server resources, tools, and prompts ...
 
+    server.registerTool('greeting', {title: 'use this tool to greet a user'}, () => {
+      return {
+        content: [{
+          type: "text",
+          text: "Hi! :)"
+        }]
+      }
+    })
+
     // Connect to the MCP server
     await server.connect(transport);
   } else {
