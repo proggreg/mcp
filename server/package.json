@@ -4,11 +4,12 @@
   "main": "index.js",
   "type": "module",
   "bin": {
-    "weather": "./build/index.js"
+    "mcp-playground": "./build/index.js"
   },
   "scripts": {
+    "dev": "npx concurrently \"tsx watch src/index.ts\" \"npx @modelcontextprotocol/inspector\"",
     "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
-    "inspect": "npx @mcpjam/inspector@latest npx -y /Users/gregfield/dev/mcp/server/build/index.js"
+    "inspect": "npx @modelcontextprotocol/inspector node ./build/index.js"
   },
   "files": [
     "build"
@@ -18,10 +19,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/express": "^5.0.3",
     "@types/node": "^22.10.0",
+    "tsx": "^4.20.5",
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.4.0"
+    "@modelcontextprotocol/sdk": "^1.4.0",
+    "express": "^5.1.0"
   }
 }
