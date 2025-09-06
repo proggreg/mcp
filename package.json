@@ -1,0 +1,24 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "description": "My MCP playground",
+  "homepage": "https://github.com/proggreg/mcp#readme",
+  "bugs": {
+    "url": "https://github.com/proggreg/mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proggreg/mcp.git"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
